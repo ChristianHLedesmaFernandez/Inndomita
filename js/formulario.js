@@ -69,7 +69,6 @@ inputs.forEach((input) => {
 });
 mensaje.addEventListener(('keyup'), validarMensaje);
 mensaje.addEventListener(('blur'), validarMensaje);
-
 /* Habilitar y desabilitar boton */
 function habilitarBoton(){
 	boton.classList.remove("opacity-50");
@@ -108,18 +107,12 @@ async function handleSubmit(e) {
 			deshabilitarBoton();
 			document.getElementById('formulario_exitoso').classList.add('formulario_exitoso_activo');
 			setTimeout(() => {
-
-					document.getElementById('spinner').classList.add("spinner_inactivo");
-					
-					document.getElementById('formulario_exitoso').classList.remove('formulario_exitoso_activo');
-					
+					document.getElementById('spinner').classList.add("spinner_inactivo");					
+					document.getElementById('formulario_exitoso').classList.remove('formulario_exitoso_activo');					
 					}, 5000);
-
 					document.querySelectorAll('.formulario_grupo_correcto').forEach((icono) => {
 					icono.classList.remove('formulario_grupo_correcto');
-
-					});
-					
+					});					
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
@@ -130,8 +123,7 @@ async function handleSubmit(e) {
         }
       }).catch(error => {
         alert("Oops! Hubo un problema al enviar su formulario");
-      })
-
+      });
 }
 formulario.addEventListener("submit", handleSubmit);
 
