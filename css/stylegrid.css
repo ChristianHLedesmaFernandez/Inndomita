@@ -1,0 +1,164 @@
+* {
+    margin: 0; 
+    box-sizing: border-box;  
+}
+body {    
+    font-family: 'sans-serif, Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    /* Para el Color Gradiente */
+    background: #8E0E00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 55px ;
+    min-height: 100vh;
+}
+#inndomita {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+main {
+    padding: 0 20px;
+}
+.pie-pagina {
+    color: white;
+}
+header {    
+    background-color: rgba(235, 217, 217, 0.4);    
+    height: 80px;
+    width: 100%;
+}
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+.nav-link {
+    color: white;
+    text-decoration: none;    
+}
+.menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.menu-item {
+    font-size: 20px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.nav-menu-link:hover {
+    background-color: orange;
+    color: black;
+    transition: .5s;
+}
+/* Logo con marca */    
+#logo {
+    width: 100px;
+    padding: 0 20px 0 0;
+}
+#marca {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 80px;    
+    align-items: center;
+    line-height: 80px; 
+}
+/* Fin Logo */
+/* Para marcar la pagina seleccionada*/
+.contacto, .inicio, .resenias, .productos {
+    background-color: orange;
+    color: black;
+}
+/* Fin */
+/* Menu Hamburguesa */
+.label-hamburguesa i {
+    font-size: 35px;
+    color: white;
+    padding-right: 10px;
+}
+.menu-hamburguesa {
+    display: none;    
+}
+.label-hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+/* Fin Menu Hamburguesa */
+
+/* Pie de Pagina */
+.pie-pagina {
+    background-color: rgba(235, 217, 217, 0.4);
+    padding: 0 10px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.pagina-personal {
+    text-decoration: none;
+    color: white;
+}
+.pagina-personal:hover {
+    color: orange;
+}
+/* Responsive */
+/*
+@media (max-width: 768px) {  Cuando tenga menos de 768px*/
+@media (max-width: 1200px) {
+    body {
+        transition: .5s;
+        background-image: url("../img/fondo2.jpg");       
+    }
+    main {
+        padding: 40px 20px;
+    }
+    #marca {
+        margin-left: 10px;
+    }
+    /* Menu Hamburguesa */
+    .label-hamburguesa {
+        display: block;
+    }
+    /* Fin Menu Hamburguesa */
+    .barra-superior {
+        flex-wrap: wrap;
+        position: relative;
+    }    
+    .menu {        
+        width: 100%;
+        background-color: rgba(235, 217, 217, .4); 
+        position: absolute;
+        top: 80px;
+        height: 0;
+        overflow: hidden;
+        /*
+        height: calc(100vh - 80px);
+        */
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+  .menu-item {
+        font-size: 15px;
+        width: 100%;
+    }
+    .menu-hamburguesa:checked + .menu {
+        /*
+        height: calc(100vh - 80px);
+        */
+        height: 40px;        
+    }     
+}
+

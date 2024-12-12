@@ -1,0 +1,71 @@
+.formulario_grupo_input {
+    position: relative;}
+.formulario_grupo_input .formulario_validacion_estado {
+    position: absolute;
+    right: 0px;
+    margin: 12px;
+    z-index: 100;
+    font-size: 18px;
+    opacity: 0;
+}
+.formulario_input { /*se lo podemos agregar al input del styleform.css*/
+    background: #fff;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+.formulario_input:focus { 
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163 163 163 .04);
+}
+.formulario_input_error {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: none;
+}
+.formulario_input_error_activo {
+    display: block;
+}
+.formulario_mensaje_error {
+    height: 35px;
+    line-height: 35px;
+    background: #f66868;
+    padding: 0 15px;
+    border-radius:  5px;
+    display: none;
+}
+.formulario_mensaje_error_activo {
+    display: block;
+}
+.formulario_exitoso {    
+    font-size: 15px;
+    background: #119200;
+    border-radius:  5px;
+    padding: 0px 110px 0px ;
+    display: none;
+}
+.formulario_exitoso_activo {
+    display: block;    
+}
+
+/* CSS para la Validacion */
+
+.formulario_grupo_correcto .formulario_validacion_estado{
+    color: #00fc15;
+    opacity: 1;
+}
+.formulario_grupo_correcto .formulario_input { 
+    border: 3px solid #00fd15;
+}
+.formulario_grupo_incorrecto .formulario_validacion_estado{
+    color: #ff0000;
+    opacity: 1;
+}
+
+.formulario_grupo_incorrecto .formulario_input { 
+    border: 3px solid #ff0000;
+}
+
+.spinner_inactivo{
+    display: none;
+}

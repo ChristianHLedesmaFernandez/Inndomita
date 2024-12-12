@@ -1,0 +1,61 @@
+
+.formulario {
+    width: 450px;
+    margin: auto;
+    background: rgba(235, 217, 217, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 10px;
+    
+}
+h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton {
+    background: #202324;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#boton:hover {
+    cursor:pointer;
+    background-color: orange;
+    color: black;
+    transition: .5s;
+}
+#spinner {
+    position: relative;
+    left: 180px; 
+    width: 3rem; 
+    height: 3rem;  
+}
+@media (max-width:480px){
+    body {
+        background-image: url("../img/fondo2.jpg");
+        background-size: 100vw 100vh;
+        background-attachment: fixed;
+        margin: 0;
+    }
+    .formulario {
+        width: 100%;
+    }    
+}
