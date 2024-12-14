@@ -30,13 +30,16 @@ function cargarProductos(productos){
         nuevoProducto.innerHTML = `
                 <div class="img">
                   <img class="img" src="../img/productos/${producto.id}.jpg" alt="">
+                  
+                  <span id="stock${producto.id}" class="sin_stock_inactivo">Producto Agotado!</span> 
+
                 </div>
                 <div class="intro">
                     <span>${producto.nombre}</span>
                     <p> ${producto.descripcion} </p>
                 </div>
                 <div class="botones">                  
-                  <button id="agregar" type="button" class="btn btn-danger">Comprar</button>
+                  <button id="agregar" type="button" class="boton${producto.id} btn btn-danger">Comprar</button>
                 </div>
         `;
         contenedorProductos.appendChild(nuevoProducto);

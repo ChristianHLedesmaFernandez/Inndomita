@@ -36,3 +36,17 @@
     overflow: hidden;
 }
 
+/*  Sin Stock  */
+
+.sin_stock_activo{
+    background-color: red;
+    position: absolute;
+    right: 25px;
+    top: 180px;
+    transform: rotate(50deg);
+    font-size: 45px;
+    display: block;
+}
+.sin_stock_inactivo{
+    display: none;
+}
