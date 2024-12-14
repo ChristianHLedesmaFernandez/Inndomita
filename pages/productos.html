@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" href="img/flor-de-loto.png" type="image/x-icon">
+    <link rel="icon" href="../img/flor-de-loto.png" type="image/x-icon">
     <title>Productos</title>
     <!-- Iconos -->
     <!-- Enlaza Font Awesome -->
@@ -15,6 +15,7 @@
     <!-- Hoja de Estilo -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleproducto.css">
+    
 </head>
 <body>
     <header class="header">
@@ -42,71 +43,27 @@
                 <li class="nav-item menu-item">
                     <a class="nav-menu-link nav-link " href="contacto.html">Contacto</a>
                 </li>
+                <!-- Icono Carrito de Compras -->
+                <li class="nav-item menu-item">
+                    <a class=" nav-link" href="#"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></a>
+                </li>
+                <!-- Icono Carrito de compra  fa-cart-shopping-->
+                <!-- Icono bolsa de compra  fa-bag-shopping-->
+                
+                
                 </ul>
             </div>
             </div>
         </nav>
         <!-- Fin del Navbar de Boostrap 5 (personalizado) -->        
     </header>
-    <main>         
-        <div class="card-container">
-            <div class="card">
-                <div class="img"><img class="img" src="../img/cascada_humo.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Lluvia de Humo</span>
-                    <p> Que la armonía y la tranquilidad sean parte de tu hogar.
-                    La figura del buda irradia y contagia energía positiva.
-                    Ideal para decorar tu hogar o para regalar! </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img class="img" src="../img/cascada_signos1.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Cascada de Humo zodiaco</span>
-                    <p>Finalmente pudimos materializar estás hermosas creaciones. Cascadas de humo de los signos del zodiaco, disponibles en variedad de colores. Las mismas cuentan con un hermoso diseño estético minimalista.</p>
-                </div>
-                
-            </div>
-            
-            <div class="card">
-                <div class="img"><img class="img" src="../img/cascada_humo3.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Cascada de Humo</span>
-                    <p>Modelo Templo</p>
-                </div>
-                
-            </div>
-            <div class="card">
-                <div class="img"><img class="img" src="../img/quemador.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Quemador de palo Santo</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias aliquam fuga fugit beatae neque optio incidunt vel est. Quia tempore modi atque ipsum optio debitis dolores laudantium laborum veritatis consectetur!</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img class="img" src="../img/hormillo.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Hornito de aceite</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi saepe alias molestias rem, voluptatibus iusto minima quas voluptate atque porro dolores? Omnis necessitatibus minus amet delectus magni voluptatum sequi!</p>
-                </div>
-                
-            </div>
-            
-            <div class="card">
-                <div class="img"><img class="img" src="../img/cascada_humo3.jpg" alt=""></div>
-                <div class="intro">
-                    <span>Cascada de Humo</span>
-                    <p>Modelo Templo</p>
-                </div>
-                
-            </div>
-            <div class="card">
-                <div class="img"><img class="img" src="" alt=""></div>
-                <div class="intro">
-                    <span>Lluvia de Humo</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui magnam in nostrum repellat illo ad itaque aliquam pariatur officia, sunt quam! Quisquam esse, ad vel nulla quidem accusantium error maiores. </p>
-                </div>
-            </div>
+    <main>      
+        <!-- Cargar en Array de Productos-->
+        <script src="../js/productos.js"></script>
+
+        <div class="card-container" id="card-container">
+         
+          <script src="../js/cargar_productos.js"></script> 
 
         </div>
     </main>
@@ -160,6 +117,8 @@
       </div>
       <!-- Fin Redes Sociales-->
     </footer>
-     <!-- Fin Pie de Pagina -->
+    <!-- Fin Pie de Pagina -->
+    <script src="../js/carrito.js"></script>
+    
 </body>
 </html>

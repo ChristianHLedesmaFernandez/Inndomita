@@ -35,6 +35,10 @@ main {
     line-height: 45px;
     text-transform: uppercase;
     width: max-content;
+    
+    /**/
+    position: relative;
+    /**/
 }
 .nav-menu-link {
     padding: 0px 12px;
@@ -55,6 +59,30 @@ main {
     background-color: orange !important;
     color: black !important;
     transition: .5s;
+}
+
+/* Carrito de Compras */
+.ico-header {
+    color: white !important;
+    padding: 0px 10px 0px 10px;
+}
+.ico-header:hover {    
+    color: orange !important;
+}
+
+#cuenta_carrito {
+    font-size: 15px;
+    background-color: red;
+    color: black;
+    border-radius: 100%;
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    aspect-ratio: 1;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    top: 8px;
 }
 /* Logo con marca */    
 #logo {

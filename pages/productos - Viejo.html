@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="icon" href="../img/flor-de-loto.png" type="image/x-icon">
-    <title>Contactenos</title>
+    <title>Productos</title>
     <!-- Iconos -->
     <!-- Enlaza Font Awesome -->
     <script src="https://kit.fontawesome.com/57708374d2.js" crossorigin="anonymous"></script>
     <!-- Bootraps -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+     
     <!-- Hoja de Estilo -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleform.css">
-    <link rel="stylesheet" href="../css/stylevalidacion.css">
+    <link rel="stylesheet" href="../css/styleproducto.css">
+    
 </head>
 <body>
     <header class="header">
@@ -35,83 +35,102 @@
                     <a class="nav-menu-link nav-link" aria-current="page" href="../index.html">inicio</a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a class="nav-menu-link nav-link" href="productos.html">Producto</a>
+                    <a class="nav-menu-link nav-link active productos" href="productos.html">Producto</a>
                 </li>              
                 <li class="nav-item menu-item">
                     <a class="nav-menu-link nav-link " href="resenias.html">Reseña</a>
                 </li>
                 <li class="nav-item menu-item">
-                    <a class="nav-menu-link nav-link active contacto" href="contacto.html">Contacto</a>
+                    <a class="nav-menu-link nav-link " href="contacto.html">Contacto</a>
                 </li>
                 <!-- Icono Carrito de Compras -->
                 <li class="nav-item menu-item">
-                    <a class=" nav-link" href="#"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></a>
+                    <a class=" nav-link" href="#"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">15</span></a>
                 </li>
+                <!-- Icono Carrito de compra  fa-cart-shopping-->
+                <!-- Icono bolsa de compra  fa-bag-shopping-->
+                
+                
                 </ul>
             </div>
             </div>
         </nav>
-        <!-- Fin del Navbar de Boostrap 5 (personalizado) -->
+        <!-- Fin del Navbar de Boostrap 5 (personalizado) -->        
     </header>
-    <main>
-        <div class="contenedor">
-            <!-- Formulario de Contacto -->
-            <form class="formulario" id="formulario" action="https://formspree.io/f/xjkvklye" method="POST">            
-                <h2>Contacto</h2>
-                <div class="formulario_grupo" id="grupo_nombre">
-                  <div class="formulario_grupo_input">
-                    <input id="nombre" class="formulario_input" type="text" name="nombre" placeholder="Nombre"  size="10" maxlength="15">
-                    <i class="formulario_validacion_estado fa-regular fa-circle-xmark"></i>
-                  </div>
-                  <p class="formulario_input_error">Nombre no valido</p>
-                </div>              
-                <div class="formulario_grupo" id="grupo_correo">
-                  <div class="formulario_grupo_input">
-                    <input id="email" class="formulario_input" type="email" name="correo" placeholder="Correo Electronico">
-                    <i class="formulario_validacion_estado fa-regular fa-circle-xmark"></i>
-                  </div>
-                  <p class="formulario_input_error">Correo Electronico no valido</p>
+    <main>      
+        <!-- Cargar en Array de Productos-->
+        <script src="../js/productos.js"></script>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/1.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Lluvia de Humo</span>
+                    <p> Que la armonía y la tranquilidad sean parte de tu hogar.
+                    La figura del buda irradia y contagia energía positiva.
+                    Ideal para decorar tu hogar o para regalar! </p>
                 </div>
-                <div class="formulario_grupo" id="grupo_telefono">
-                  <div class="formulario_grupo_input">
-                      <input id="telefono" class="formulario_input" type="text" name="telefono" placeholder="Telefono"  size="10" maxlength="15">
-                      <i class="formulario_validacion_estado fa-regular fa-circle-xmark"></i>
-                  </div>
-                  <p class="formulario_input_error">Telefono no valido</p>
+                <div class="botones">
+
+                  <button type="button" class="btn btn-info">Info</button>
+                  
+                  <button type="button" class="btn btn-danger">Comprar</button>
+
                 </div>
-                <div class="formulario_grupo " id="grupo_mensaje">
-                  <div class="formulario_grupo_input">                  
-                      <textarea id="mensaje" class="formulario_input" name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-                      <i class="formulario_validacion_estado fa-regular fa-circle-xmark"></i>
-                  </div>
-                  <p class="formulario_input_error">El campo mensaje no puede estar vacio</p>
-                </div>                
-                <div class="formulario_mensaje_error" id="formulario_mensaje_error">
-                  <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error: </b>Rellene correctamente el formulario</p>
+            </div>
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/2.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Cascada de Humo zodiaco</span>
+                    <p>Finalmente pudimos materializar estás hermosas creaciones. Cascadas de humo de los signos del zodiaco, disponibles en variedad de colores. Las mismas cuentan con un hermoso diseño estético minimalista.</p>
                 </div>
                 
-                
-                
-                <div class="formulario_grupo formulario_grupo_btm">
-                  <input class="opacity-50" type="submit" id="boton" value="Enviar" disabled>  
+            </div>
+            
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/4.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Cascada de Humo</span>
+                    <p>Modelo Templo</p>
                 </div>
-                <!-- Spinner Boostrap -->
-                <div id="spinner" class="spinner-border text-warning spinner_inactivo" role="status">
-                  <span class="sr-only opacity-0">Loading...</span>
-                </div>
-                <!--   -->
-                <p class="formulario_exitoso" id="formulario_exitoso"> Formulario enviado con exito </p>
                 
-            </form>
+            </div>
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/5.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Quemador de palo Santo</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias aliquam fuga fugit beatae neque optio incidunt vel est. Quia tempore modi atque ipsum optio debitis dolores laudantium laborum veritatis consectetur!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/9.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Hornito de aceite</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi saepe alias molestias rem, voluptatibus iusto minima quas voluptate atque porro dolores? Omnis necessitatibus minus amet delectus magni voluptatum sequi!</p>
+                </div>
+                
+            </div>
+            
+            <div class="card">
+                <div class="img"><img class="img" src="../img/productos/10.jpg" alt=""></div>
+                <div class="intro">
+                    <span>Cascada de Humo</span>
+                    <p>Modelo Templo</p>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="img">
+                  <img class="img" src="" alt="">
+                </div>
+                <div class="intro">
+                    <span>Lluvia de Humo</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui magnam in nostrum repellat illo ad itaque aliquam pariatur officia, sunt quam! Quisquam esse, ad vel nulla quidem accusantium error maiores. </p>
+                </div>
+            </div>
+
         </div>
     </main>
-
-
-
-
-
-
-
     <!-- Pie de Pagina -->
     <footer class="pie-pagina">
       <div class="row pie">
@@ -119,9 +138,9 @@
           <h5>Secciones</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="../index.html" class="link-footer nav-link p-0 text-body-secondary">Inicio</a></li>
-            <li class="nav-item mb-2"><a href="productos.html" class="link-footer nav-link p-0 text-body-secondary">Productos</a></li>
-            <li class="nav-item mb-2"><a href="resenias.html" class="link-footer nav-link p-0 text-body-secondary">Reseña</a></li>
-            <li class="nav-item mb-2"><a href="#" class="link-footer nav-link p-0 text-body-secondary contacto">Contacto</a></li>
+            <li class="nav-item mb-2"><a href="#" class="link-footer nav-link p-0 text-body-secondary productos">Productos</a></li>
+            <li class="nav-item mb-2"><a href="pages/resenias.html" class="link-footer nav-link p-0 text-body-secondary">Reseña</a></li>
+            <li class="nav-item mb-2"><a href="pages/contacto.html" class="link-footer nav-link p-0 text-body-secondary">Contacto</a></li>
           </ul>
         </div> 
         <div class="col-md-5 offset-md-1 mb-3 ms-auto">
@@ -162,8 +181,6 @@
       </div>
       <!-- Fin Redes Sociales-->
     </footer>
-    <!-- Fin Pie de Pagina -->     
-    <script src="../js/carrito.js"></script>
-    <script src="../js/formulario.js"></script>
+     <!-- Fin Pie de Pagina -->  
 </body>
 </html>
