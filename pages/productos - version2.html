@@ -44,20 +44,9 @@
                     <a class="nav-menu-link nav-link " href="contacto.html">Contacto</a>
                 </li>
                 <!-- Icono Carrito de Compras -->
-                <!-- 
                 <li class="nav-item menu-item">
                     <a class=" nav-link" href="#"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></a>
                 </li>
-                -->
-                <!-- Boton que abre el Carrito de compras Lateral -->
-                <li class="nav-item menu-item">
-                  <button class="nav-link" type="submit" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="ico-header fa-solid fa-cart-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></button>
-                </li>
-                <!--
-                <li class="nav-item">
-                  <button class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="ico-header fa-solid fa-cart-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></button>
-                </li>-->
-
                 <!-- Icono Carrito de compra  fa-cart-shopping-->
                 <!-- Icono bolsa de compra  fa-bag-shopping-->
                 
@@ -71,30 +60,12 @@
     <main>      
         <!-- Cargar en Array de Productos-->
         <script src="../js/productos.js"></script>
-        <!-- Lista de Tarjetas de Productos-->
-        <div class="card-container" id="card-container">         
-          <script src="../js/cargar_productos.js"></script>
-        </div>
 
-        <!-- Carrito OffCanvas (Barra Lateral) -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header" id="carrito-header">
-            <h1 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h1>
-          </div>
-          <div class="offcanvas-body" id="carrito-body">
-            
-          </div>
-          <div class="offcanvas-footer" id="carrito-footer">
-            <!-- Totales -->
-             <!-- Botones -->
-              <div class="boton-carrito">
-                <button>Cerrar</button>
-                <button>Pagar</button>
-              </div>
-          </div>
-        </div>
-        <!-- Fin Carrito de Compras -->
+        <div class="card-container" id="card-container">
          
+          <script src="../js/cargar_productos.js"></script> 
+
+        </div>
     </main>
     <!-- Pie de Pagina -->
     <footer class="pie-pagina">

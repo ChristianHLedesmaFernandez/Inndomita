@@ -1,13 +1,6 @@
-// local Storage
-
 const cuentaCarritoElement = document.getElementById("cuenta_carrito");
-
-
-
 function agregarAlCarrito(item){
-    //const carrito = JSON.parse(localStorage.getItem("carritoProductos"));
     // Verifico el Stock
-
     let botonItem = document.querySelector(`.boton${item.id}`);
     let sinStock = document.getElementById(`stock${item.id}`);
     if (item.stock <= 0) {
@@ -16,6 +9,7 @@ function agregarAlCarrito(item){
         sinStock.classList.add('sin_stock_activo')
         return;
     }
+    // Reducir Stock
     item.stock --;
     const carrito = JSON.parse(localStorage.getItem('carritoProductos')) || [];
     if(!carrito){
@@ -27,18 +21,12 @@ function agregarAlCarrito(item){
         if (indiceProducto === -1){
             nuevoCarrito.push(getNuevoProductoParaMemoria(item));
         } else {
-            nuevoCarrito[indiceProducto].cantidad ++;
-            // Reducir Stock
-            //nuevoCarrito[indiceProducto].stock --;        
+            nuevoCarrito[indiceProducto].cantidad ++;     
         }
         localStorage.setItem("carritoProductos", JSON.stringify(nuevoCarrito));
     }
     actualizarNumeroCarrito();
 };
-
-
-
-
 // Toma un producto, le agrega cantidad y lo devuelve.
 function getNuevoProductoParaMemoria(producto){
     const nuevoProducto =  {
@@ -49,14 +37,11 @@ function getNuevoProductoParaMemoria(producto){
     };
     return nuevoProducto;
 };
-
-
 function actualizarNumeroCarrito(){
-
     const carrito = JSON.parse(localStorage.getItem("carritoProductos"));
     const cuenta = carrito.reduce((acum, current) => acum+current.cantidad, 0);
     cuentaCarritoElement.innerHTML = cuenta;
-
 };
 
 actualizarNumeroCarrito();
+
