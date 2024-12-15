@@ -21,20 +21,18 @@
     cursor: pointer;
     border: none;
 }
-
 .offcanvas button:hover{
     color: white;
     background-color: black;
     height: 60px;
     cursor: pointer;
 }
-
 .offcanvas-body{     
     overflow: auto;
 }
 .item {
     display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
+    grid-template-columns: 60px 150px 70px 70px;
     gap: 5px;    
     text-align: center;
     align-items: center;
@@ -46,7 +44,6 @@
     text-align: center;
     gap: 5px;
 }
-
 hr {    
     width: 350px;
     margin: auto;
@@ -56,11 +53,17 @@ hr {
 #descuento {
     color: rgb(4, 248, 4);
 }
-
 #total {
     font-size: 25px;
 }
 #iva {margin-top: 15px;
 }
-
+.cantidad {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center
+}
+.cantidad i {
+    color: orange !important;
+}
  

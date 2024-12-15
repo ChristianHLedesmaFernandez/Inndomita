@@ -50,7 +50,6 @@ function actualizarNumeroCarrito(){
     }
 };
 actualizarNumeroCarrito();
-
 // Eliminar el carrito
 function vaciarCarrito(){
     actualizarNumeroCarrito();
@@ -65,12 +64,31 @@ function mostrarCheckout() {
     vaciarCarrito();
     location.reload()
 }
-
-
-
 CarritoOfCanvas.addEventListener('show.bs.offcanvas', function () {
     cargarCarrito();
   });
   CarritoOfCanvas.addEventListener('hide.bs.offcanvas', function () {
     actualizarNumeroCarrito();
   });
+  function sumarAlCarrito(item){
+    let carrito = JSON.parse(localStorage.getItem("carritoProductos"));
+    let indiceProducto = carrito.findIndex(producto => producto.id === item);
+    agregarAlCarrito(carrito[indiceProducto]);
+    cargarCarrito();    
+    actualizarNumeroCarrito();
+};
+function restarAlCarrito(item){
+    let memoria = JSON.parse(localStorage.getItem("carritoProductos"));
+  let cantidadProductoFinal = 0;  
+  const indiceProducto = memoria.findIndex(producto => producto.id === item);
+  let nuevaMemoria = memoria;
+  nuevaMemoria[indiceProducto].cantidad--;
+  cantidadProductoFinal = nuevaMemoria[indiceProducto].cantidad;
+  if(cantidadProductoFinal === 0){
+    nuevaMemoria.splice(indiceProducto,1)
+  };
+  localStorage.setItem("carritoProductos",JSON.stringify(nuevaMemoria));
+  cargarCarrito();
+  actualizarNumeroCarrito();
+  return cantidadProductoFinal;
+}
