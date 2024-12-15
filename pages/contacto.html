@@ -15,7 +15,8 @@
     <!-- Hoja de Estilo -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleform.css">
-    <link rel="stylesheet" href="../css/stylevalidacion.css">
+    <link rel="stylesheet" href="../css/stylevalidacion.css">    
+    <link rel="stylesheet" href="../css/stylecarrito.css">
 </head>
 <body>
     <header class="header">
@@ -45,7 +46,7 @@
                 </li>
                 <!-- Icono Carrito de Compras -->
                 <li class="nav-item menu-item">
-                    <a class=" nav-link" href="#"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></a>
+                  <button class="nav-link" type="submit" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="ico-header fa-solid fa-bag-shopping fa-2xl"></i><span id="cuenta_carrito">0</span></button>
                 </li>
                 </ul>
             </div>
@@ -104,6 +105,29 @@
                 
             </form>
         </div>
+        <!-- Carrito Lateral -->
+        <script src="../js/cargar_listas.js"></script>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header" id="carrito-header">
+                <h1 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h1>
+              </div>
+              <hr>          
+              <div class="offcanvas-body" id="carrito-container">
+              </div>
+              <div class="offcanvas-footer" id="carrito-footer">
+                 <div class="totales">
+                    <p>Subtotal: <span id="subtotal-carrito">$ 0</span></p><hr>
+                    <!--<p id="descuento">Descuento: <span id="descuento-carrito">$ 0</span></p>-->
+                    <p id="iva">IVA (21%): <span id="iva-carrito">$ 0</span></p><hr>
+                    <p id="total">Total: <span id="total-carrito">$ 0</span></p>
+                 </div>
+                  <div class="botones">
+                    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    <button onclick="mostrarCheckout()">Checkout</button>
+                  </div>
+              </div>
+            </div>
+            <!-- Fin Carrito Lateral-->
     </main>
 
 
