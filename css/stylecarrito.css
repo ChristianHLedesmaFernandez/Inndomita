@@ -56,7 +56,9 @@ hr {
 #total {
     font-size: 25px;
 }
-#iva {margin-top: 15px;
+#iva {
+    color: red;
+    margin-top: 15px;
 }
 .cantidad {
     display: grid;

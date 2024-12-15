@@ -56,12 +56,3 @@
 .sin_stock_inactivo{
     display: none;
 }
-/* Para desplegar el carrito de compras*/
-.shopping-container{
-    width: 400px;
-    color: white;
-    background-color: black;
-    position: fixed;
-    inset: 0 0 0 auto;
-    
-}

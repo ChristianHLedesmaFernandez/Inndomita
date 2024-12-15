@@ -37,9 +37,6 @@ function cargarCarrito(){
                   <span class="botonMas" onclick="sumarAlCarrito(${producto.id})"><i id="ico-carrito" class="ico-carrito fa-solid fa-arrow-up"></i></span>
                   <span>${producto.cantidad}</span>
                   <span class="botonMenos" onclick="restarAlCarrito(${producto.id})" type="submit" ><i id="ico-carrito" class="ico-carrito fa-solid fa-arrow-down"></i></span>
-
-
-
               </div>
             </div>              
       `;
