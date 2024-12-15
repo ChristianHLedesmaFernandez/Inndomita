@@ -3,8 +3,7 @@ const contenedorProductos = document.getElementById("card-container");
 function cargarProductos(productos){
   productos.forEach(producto => {      
       const nuevoProducto = document.createElement("div");
-      nuevoProducto.classList = "card";
-      
+      nuevoProducto.classList = "card";      
       nuevoProducto.innerHTML = `
               <div class="img">
                 <img class="img" src="../img/productos/${producto.id}.jpg" alt="">
